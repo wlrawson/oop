@@ -32,12 +32,12 @@ def modify_employee():
     employee_id = "Employee" + str(len(myEmployee) + 1)
 
     employee_name = input("Enter New Employee name: ")
-    basic_pay = input("Enter New Basic pay: ")
-    allowance = input("Enter New Allowance: ")
-    deductions = input("Enter New Deductions: ")
-    taxes = input("Enter New Taxes: ")
-    gross_pay = input("Enter New Gross_pay: ")
-    net_pay = input("Enter New Net pay: ")
+    basic_pay = int(input("Enter New Basic pay: "))
+    allowance = int(input("Enter New Allowance: "))
+    deductions = int(input("Enter New Deductions: "))
+    taxes = int(input("Enter New Taxes: "))
+    gross_pay = (basic_pay + allowance)
+    net_pay = (gross_pay - deductions - taxes)
 
     myEmployee.update({
         employee_id: {
