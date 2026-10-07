@@ -1,4 +1,4 @@
-works. but still needs more functions 
+#works. but still needs more functions
 
 
 class student :
@@ -39,21 +39,28 @@ class cources :
         self.teaching_faculty = ""
         self.enrolled_students = ""
 
+    def cou.assign_new_faculty():
+        self.id = input("Enter faculty ID: ")
+        self.id = input ("Enter faculty ID: ")
+
+
 mystudents = []
 myfaculty = []
 mycources = []
 
 stu = student()
 fac = faculty()
-cla = cources()
+cou = cources()
 
 
 while "true":
     print ("1 Add student ")
     print ("2 Print students")
-    print ("3 Create New Faculty")
-    print ("4 print Employee's")
-    print ("5 exit")
+    print ("3 Create new faculty")
+    print ("4 print faculty")
+    print ("5 add course")
+    print ("6 Print courses")
+    print ("7 exit")
     choice = int(input())
 
     if choice == 1:
@@ -68,13 +75,13 @@ while "true":
         fac.create_new_faculty()
     elif choice == 4:
         fac.display_faculty()
+    elif choice == 5:
+        cou.assign_new_faculty()
+    elif choice == 6:
+        cou.display_cources()
+    elif choice == 7:
+        cou.regester_students()
+    elif choice == 8:
+        cou.display_cources
     else:
         exit(True)
-
-
-Stu.create_new_student()
-Stu.display_student()
-
-mystudents.append(Stu)
-
-print(mystudents)
