@@ -59,12 +59,12 @@ auth = Author()
 user = User()
 
 while "true":
-    print ("1 Add student ")
-    print ("2 Print students")
-    print ("3 Create new faculty")
-    print ("4 print faculty")
-    print ("5 add course")
-    print ("6 Print courses")
+    print ("1 Add book ")
+    print ("2 Print book")
+    print ("3 Add author")
+    print ("4 print author")
+    print ("5 add user")
+    print ("6 Print user")
     print ("7 exit")
     choice = int(input())
 
