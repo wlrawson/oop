@@ -38,13 +38,15 @@ locations = {
     "village": {
         "name": "The Village",
         "description": "A quiet village on the edge of a dark forest.",
-        "exits": ["forest", "castle"]
+        "exits": ["forest", "castle"],
+        "enemies": []
     },
 
     "forest": {
         "name": "The Dark Forest",
         "description": "Trees block out the sunlight. You hear something moving nearby.",
-        "exits": ["village", "cave"]
+        "exits": ["village", "cave"],
+        "enemies": ["soldier", "spider", "witch", "wolf"]
     },
 
     "castle": {
@@ -78,6 +80,19 @@ locations = {
         "exits": ["forest"]
     }
 }
+
+
+enemies = {
+    "soldier": {
+        "name": "Enemy Soldier"
+        "health": 20
+        "armour": 5
+        "attack": 10
+        "gold_reward": 5
+
+    },
+
+
 
 current_location = "village"
 
