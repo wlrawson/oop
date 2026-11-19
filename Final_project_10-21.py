@@ -1,3 +1,5 @@
+import random
+
 print ("welcome to Uncharted!")
 print("Enter your name:")
 player1_name = input()
@@ -37,26 +39,28 @@ locations = {
         "name": "The Dark Forest",
         "description": "Trees block out the sunlight. You hear something moving nearby.",
         "exits": ["village", "cave"],
-        "enemies": ["soldier", "spider", "witch", "wolf"]
+        "enemies": ["Soldier", "Goblin", "Skeleton"]
     },
 
     "castle": {
         "name": "The Lost Castle",
         "description": "An ancient castle stands before you.",
-        "exits": ["village"]
+        "exits": ["village"],
+        "enemies": ["Soldier", "Goblin", "Skeleton"]
     },
 
     "cave": {
         "name": "The Hidden Cave",
         "description": "A dark cave filled with secrets and danger.",
-        "exits": ["forest"]
+        "exits": ["forest"],
+        "enemies": ["Soldier", "Goblin", "Skeleton"]
     }
 }
 
 
 enemies = {
-    "Enemy Soldier": {
-        "name": "Enemy Soldier",
+    "Soldier": {
+        "name": "Soldier",
         "health": 20,
         "armour": 5,
         "attack": 10,
@@ -70,7 +74,7 @@ enemies = {
         "attack": 5,
         "gold_reward": 5
     },
-    "Skeleton ": {
+    "Skeleton": {
         "name": "Skeleton",
         "health": 25,
         "armour": 10,
@@ -89,6 +93,19 @@ current_location = "village"
 
 while True:
     location = locations[current_location]
+
+    available_enemies = location.get("enemies", [])
+
+    if available_enemies and random.random() < 0.5:
+        enemy_key = random.choice(available_enemies)
+        enemy = enemies[enemy_key]
+
+        print("\n!!! ENEMY ENCOUNTER !!!")
+        print("A", enemy["name"], "appears!")
+
+        input("Press Enter to continue...")
+
+        continue
 
     print("\n==", location["name"], "==")
     print(location["description"])
