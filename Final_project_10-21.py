@@ -1,4 +1,4 @@
-print ("welcome to The Lost Kingdom!")
+print ("welcome to Uncharted!")
 print("Enter your name:")
 player1_name = input()
 print("Welcome", player1_name)
@@ -23,16 +23,7 @@ input()
 
 Functions.show_stats ()
 
-
-
-
-#mylocations = []
-
-
-
 #-----------------------------------------------
-
-
 
 locations = {
     "village": {
@@ -63,34 +54,34 @@ locations = {
 }
 
 
-locations = {
-    "village": {
-        "name": "The Village",
-        "description": "A quiet village. You see a path leading into the forest.",
-        "exits": ["forest"]
-    },
-    "forest": {
-        "name": "The Dark Forest",
-        "description": "The trees are dark, and you hear a strange noise.",
-        "exits": ["village", "cave"]
-    },
-    "cave": {
-        "name": "The Hidden Cave",
-        "description": "You discover a cave filled with mysterious objects.",
-        "exits": ["forest"]
-    }
-}
-
-
 enemies = {
-    "soldier": {
-        "name": "Enemy Soldier"
-        "health": 20
-        "armour": 5
-        "attack": 10
+    "Enemy Soldier": {
+        "name": "Enemy Soldier",
+        "health": 20,
+        "armour": 5,
+        "attack": 10,
         "gold_reward": 5
 
     },
+    "Goblin": {
+        "name": "Goblin",
+        "health": 10,
+        "armour": 5,
+        "attack": 5,
+        "gold_reward": 5
+    },
+    "Skeleton ": {
+        "name": "Skeleton",
+        "health": 25,
+        "armour": 10,
+        "attack": 5,
+        "gold_reward": 10
+
+    }
+
+
+
+}
 
 
 
